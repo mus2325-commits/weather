@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  background-color: #f4f5f7;
+  color: #222222;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* 모바일 메인 컨테이너 (최대 가로 500px 제한) */
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 32px 24px;
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+}
+
+/* 상단 헤더 */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.city-name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1f2328;
+}
+
+.refresh-btn {
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1.5px solid #666666;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.refresh-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.refresh-btn:active {
+  background-color: #e5e7eb;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.header-divider {
+  border: none;
+  border-top: 1.5px solid #777777;
+  margin: 18px 0 22px;
+}
+
+/* 공통 점선 카드 스타일 */
+.dashed-box {
+  border: 1.5px dashed #777777;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+/* 메인 날씨 카드 */
+.main-weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 20px;
+  margin-bottom: 16px;
+}
+
+/* 와이어프레임 X자 플레이스홀더 */
+.icon-placeholder {
+  position: relative;
+  border: 1.5px solid #777777;
+  background-color: #fafafa;
+  background-image: 
+    linear-gradient(to top right, transparent calc(50% - 0.8px), #777777 calc(50% - 0.8px), #777777 calc(50% + 0.8px), transparent calc(50% + 0.8px)),
+    linear-gradient(to bottom right, transparent calc(50% - 0.8px), #777777 calc(50% - 0.8px), #777777 calc(50% + 0.8px), transparent calc(50% + 0.8px));
+}
+
+.main-icon {
+  width: 46%;
+  aspect-ratio: 1 / 1;
+  max-width: 170px;
+  flex-shrink: 0;
+}
+
+.temp-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.current-temp {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #1f2328;
+  margin-bottom: 8px;
+}
+
+.weather-status {
+  font-size: 18px;
+  font-weight: 500;
+  color: #222222;
+  margin-bottom: 12px;
+}
+
+.temp-range-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f1f2f4;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* 2x4 상세 지표 그리드 (8개 카드가 빽빽하게 2열로 균형감 있게 배치) */
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.detail-card {
+  padding: 14px 14px 14px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card-text-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0; /* 넘침 방지 */
+}
+
+.detail-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222222;
+  margin-bottom: 6px;
+}
+
+.detail-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2328;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 카드 내부 우측의 작은 X자 플레이스홀더 */
+.sub-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+@media (max-width: 380px) {
+  .current-temp {
+    font-size: 48px;
+  }
+  .detail-value {
+    font-size: 18px;
+  }
+}

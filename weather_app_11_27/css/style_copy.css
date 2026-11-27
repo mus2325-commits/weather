@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  background-color: #f3f4f6;
+  color: #111827;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 24px 0;
+}
+
+/* Mobile_Main (500px) 프레임 */
+.mobile-frame {
+  width: 500px;
+  max-width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 44px 36px 48px;
+}
+
+/* 상단 헤더 */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.location-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  color: #111827;
+}
+
+.refresh-btn {
+  padding: 7px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  background-color: #ffffff;
+  border: 1.5px solid #374151;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.refresh-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.refresh-btn:active {
+  background-color: #e5e7eb;
+}
+
+.header-divider {
+  border: none;
+  border-top: 1.5px solid #374151;
+  margin-bottom: 24px;
+}
+
+/* 메인 날씨 카드 (짙은 하늘색 배경) */
+.main-weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px;
+  border-radius: 14px;
+  background-color: #0284c7;
+  margin-bottom: 20px;
+}
+
+.main-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 164px;
+  height: 164px;
+  flex-shrink: 0;
+}
+
+.main-temp-info {
+  flex: 1;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.current-temp {
+  font-size: 68px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.weather-status {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f0f9ff;
+  margin-bottom: 6px;
+}
+
+.temp-range {
+  font-size: 15px;
+  font-weight: 400;
+  color: #e0f2fe;
+}
+
+.range-bar {
+  margin: 0 4px;
+  opacity: 0.7;
+}
+
+/* 상세 지표 그리드 (2열 4행) */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.metric-card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background-color: #ffffff;
+  min-height: 92px;
+}
+
+.metric-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 8px;
+}
+
+.metric-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.metric-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.4px;
+}
+
+.metric-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}

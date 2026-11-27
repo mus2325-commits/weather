@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile_Main (500px)</title>
+  <!-- Pretendard 웹폰트 로드 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <!-- Iconify 웹 컴포넌트 로드 -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="css/style_copy.css">
+</head>
+<body>
+  <div class="mobile-frame">
+    <!-- 상단 헤더 -->
+    <header class="app-header">
+      <h1 class="location-title">서울특별시</h1>
+      <button type="button" id="refresh-btn" class="refresh-btn">새로고침</button>
+    </header>
+
+    <hr class="header-divider">
+
+    <!-- 메인 날씨 카드 -->
+    <section class="main-weather-card">
+      <div class="main-icon-box">
+        <iconify-icon id="main-weather-icon" icon="meteocons:partly-cloudy-day-fill" width="144" height="144"></iconify-icon>
+      </div>
+      <div class="main-temp-info">
+        <div class="current-temp" id="current-temp">14°</div>
+        <div class="weather-status" id="weather-status">구름 조금</div>
+        <div class="temp-range" id="temp-range">최고 18° <span class="range-bar">|</span> 최저 7°</div>
+      </div>
+    </section>
+
+    <!-- 상세 지표 그리드 (2열 4행) -->
+    <section class="metrics-grid">
+      <!-- 습도 -->
+      <div class="metric-card">
+        <div class="metric-text">
+          <span class="metric-label">습도</span>
+          <strong class="metric-value" id="humidity-val">52%</strong>
+        </div>
+        <div class="metric-icon-box">
+          <iconify-icon icon="fluent-emoji-flat:droplet" width="38" height="38"></iconify-icon>
+        </div>
+      </div>
+
+      <!-- 강수량 -->
+      <div class="metric-card">
+        <div class="metric-text">
+          <span class="metric-label">강수량</span>
+          <strong class="metric-value" id="rain-val">0.0 mm</strong>
+        </div>
+        <div class="metric-icon-box">
+          <iconify-icon icon="meteocons:rain-fill" width="44" height="44"></iconify-icon>
+        </div>
+      </div>
+
+      <!-- 풍량 -->
+      <div class="metric-card">
+        <div class="metric-text">
+          <span class="metric-label">풍량</span>
+          <strong class="metric-value" id="wind-val">3.4 m/s</strong>
+        </div>
+        <div class="metric-icon-box">
+          <iconify-icon icon="meteocons:wind-fill" width="44" height="44"></iconify-icon>
+        </div>
+      </div>
+
+      <!-- 기압 -->
+      <div class="metric-card">
+        <div class="metric-text">
+          <span class="metric-label">기압</span>
+          <strong class="metric-value" id="pressure-val">1013 hPa</strong>
+        </div>
+        <div class="metric-icon-box">
+          <iconify-icon icon="meteocons:barometer-fill" width="44" height="44"></iconify-icon>
+        </div>
+      </div>
+
+      <!-- 적설량 -->
+      <div class="metric-card">
+        <div class="metric-text">
+          <span class="metric-label">적설량</span>
+          <strong class="metric-value" id="snow-val">0.0 cm</strong>
+        </div>
+        <div class="metric-icon-box">
+          <iconify-icon icon="meteocons:snowflake-fill" width="44" height="44"></iconify-icon>
+        </div>
+      </div>
+
+      <!-- 가시거리 -->
+      <div class="metric-card">
+        <div class="metric-text">
+          <span class="metric-label">가시거리</span>
+          <strong class="metric-value" id="visibility-val">10 km</strong>
+        </div>
+        <div class="metric-icon-box">
+          <iconify-icon icon="fluent-emoji-flat:eye" width="38" height="38"></iconify-icon>
+        </div>
+      </div>
+
+      <!-- UV 지수 -->
+      <div class="metric-card">
+        <div class="metric-text">
+          <span class="metric-label">UV 지수</span>
+          <strong class="metric-value" id="uv-val">3</strong>
+        </div>
+        <div class="metric-icon-box">
+          <iconify-icon icon="meteocons:uv-index-fill" width="44" height="44"></iconify-icon>
+        </div>
+      </div>
+
+      <!-- 파도 높이 -->
+      <div class="metric-card">
+        <div class="metric-text">
+          <span class="metric-label">파도 높이</span>
+          <strong class="metric-value" id="wave-val">0.5 m</strong>
+        </div>
+        <div class="metric-icon-box">
+          <iconify-icon icon="fluent-emoji-flat:water-wave" width="38" height="38"></iconify-icon>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/main copy.js"></script>
+</body>
+</html>

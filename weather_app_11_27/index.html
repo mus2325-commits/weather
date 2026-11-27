@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날씨 앱 프로토타입</title>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- 상단 헤더 영역 -->
+    <header class="app-header">
+      <h1 class="city-name" id="city-name">위치 확인 중...</h1>
+      <button type="button" class="refresh-btn" id="refresh-btn">새로고침</button>
+    </header>
+
+    <hr class="header-divider">
+
+    <!-- 메인 날씨 정보 카드 (기온 + 기준 시각) -->
+    <main class="weather-content">
+      <section class="main-weather-card dashed-box">
+        <div class="icon-placeholder main-icon" aria-label="날씨 아이콘 영역"></div>
+        
+        <div class="temp-info">
+          <div class="current-temp" id="current-temp">--°</div>
+          <div class="weather-status" id="weather-status">데이터 대기 중</div>
+          <div class="temp-range-badge">
+            <span id="base-time">기준 --:--</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 상세 지표 2x4 그리드 영역 (모든 카드에 개별 X자 아이콘 추가) -->
+      <section class="detail-grid">
+        <div class="detail-card dashed-box">
+          <div class="card-text-group">
+            <h2 class="detail-title">습도</h2>
+            <p class="detail-value" id="humidity-value">-- %</p>
+          </div>
+          <div class="icon-placeholder sub-icon" aria-label="습도 아이콘"></div>
+        </div>
+
+        <div class="detail-card dashed-box">
+          <div class="card-text-group">
+            <h2 class="detail-title">강수량</h2>
+            <p class="detail-value" id="precip-value">-- mm/h</p>
+          </div>
+          <div class="icon-placeholder sub-icon" aria-label="강수량 아이콘"></div>
+        </div>
+
+        <div class="detail-card dashed-box">
+          <div class="card-text-group">
+            <h2 class="detail-title">풍량</h2>
+            <p class="detail-value" id="wind-value">-- m/s</p>
+          </div>
+          <div class="icon-placeholder sub-icon" aria-label="풍량 아이콘"></div>
+        </div>
+
+        <div class="detail-card dashed-box">
+          <div class="card-text-group">
+            <h2 class="detail-title">기압</h2>
+            <p class="detail-value" id="pressure-value">-- hPa</p>
+          </div>
+          <div class="icon-placeholder sub-icon" aria-label="기압 아이콘"></div>
+        </div>
+
+        <div class="detail-card dashed-box">
+          <div class="card-text-group">
+            <h2 class="detail-title">적설량</h2>
+            <p class="detail-value" id="snow-value">-- m</p>
+          </div>
+          <div class="icon-placeholder sub-icon" aria-label="적설량 아이콘"></div>
+        </div>
+
+        <div class="detail-card dashed-box">
+          <div class="card-text-group">
+            <h2 class="detail-title">가시거리</h2>
+            <p class="detail-value" id="visibility-value">-- km</p>
+          </div>
+          <div class="icon-placeholder sub-icon" aria-label="가시거리 아이콘"></div>
+        </div>
+
+        <div class="detail-card dashed-box">
+          <div class="card-text-group">
+            <h2 class="detail-title">UV 지수</h2>
+            <p class="detail-value" id="uv-value">--</p>
+          </div>
+          <div class="icon-placeholder sub-icon" aria-label="UV 지수 아이콘"></div>
+        </div>
+
+        <div class="detail-card dashed-box">
+          <div class="card-text-group">
+            <h2 class="detail-title">파도 높이</h2>
+            <p class="detail-value" id="wave-value">-- m</p>
+          </div>
+          <div class="icon-placeholder sub-icon" aria-label="파도 높이 아이콘"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
